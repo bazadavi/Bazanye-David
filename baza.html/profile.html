@@ -1,0 +1,106 @@
+<html>
+<head>
+    <title>My CV - Baza David</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #007BFF;
+        }
+        .profile {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #007BFF;
+        }
+        .profile input {
+            margin-top: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #007BFF;
+            color: white;
+        }
+        .section {
+            margin-top: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f8f9fa;
+            margin: 5px 0;
+            padding: 10px;
+            border-left: 5px solid #007BFF;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Curriculum Vitae</h1>
+
+    <div class="profile">
+        <img id="profileImage" src="https://via.placeholder.com/120" alt="Profile Picture">
+        <br>
+        <input type="file" id="imageUpload" accept="image/*">
+    </div>
+
+    <div class="section">
+        <h2>Personal Information</h2>
+2        <p><strong>Name:</strong> Bazanye David</p>
+        <p><strong>Email:</strong> bazadavid@gmail.com</p>
+        <p><strong>Phone:</strong> +256 777330302</p>
+        <p><strong>Address:</strong> Kampala, Uganda</p>
+        <p><strong>Weight:</strong>70kg</p>
+        <p><strong>Height:</strong>162 cm</p>
+    </div>
+
+    <div class="section">
+        <h2>References</h2>
+        <p>Ronald James, CEO 0704785636</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('imageUpload').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('profileImage').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script> <br>
+<a href="Education.html"><button>NEXT</button></a>
+</body>
+</html>
